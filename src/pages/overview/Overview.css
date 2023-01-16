@@ -1,0 +1,7 @@
+/* Alleen de eerste letter in de overview wordt bewerkt met css-styling*/
+.overview-info::first-letter{
+    color: var(--secondary);
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: 900;
+}

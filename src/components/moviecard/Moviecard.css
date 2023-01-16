@@ -1,0 +1,52 @@
+.movie-card {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    margin: 10px;
+    float: left;
+    background-size: cover;
+}
+
+.movie-card img {
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+.movie-card .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.movie-card:hover .overlay {
+    border: 3px solid var(--secondary);
+}
+
+.movie-card .overview {
+    cursor: pointer;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 4px 8px;
+    color: white;
+    margin: 0;
+    font: 14px Sans-Serif;
+}
+.light .movie-card .overview {
+    background: rgba(255, 255, 255, 0.75);
+    color: black;
+}
+
+.filler-poster {
+    width: 75px;
+    height: 113px;
+    background-color: #dbdada;
+    border-radius: 5px;
+    margin-right: 15px;
+    display: block;
+    color: transparent;
+}

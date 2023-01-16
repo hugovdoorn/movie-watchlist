@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/watch-list-frontend-eindopdracht.iml" filepath="$PROJECT_DIR$/.idea/watch-list-frontend-eindopdracht.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/watchlist-frontend-eindopdracht.iml" filepath="$PROJECT_DIR$/.idea/watchlist-frontend-eindopdracht.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,77 @@
+/* height kan niet 'gewoon' 100 vh worden omdat de navigatiebalk sticky is en anders krijg je overlap met elkaar. De navigatiebalk is 50px daarom wordt het 100vh-50px*/
+.register{
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0.3)
+    ),
+    url(../../assets/images/background_register_pic.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.register-title{
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.register-form{
+    width: 20%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+}
+
+.register-form > label{
+    margin: 10px 0;
+}
+
+.register-input{
+    color: var(--primary);
+    padding: 10px;
+    background-color: #fdfdfd;
+    border: none;
+    border-radius: 10px;
+}
+
+.register-button {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: var(--primary);
+    border: none;
+    color: #F0FFF0;
+    border-radius: 10px;
+    padding: 10px;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #1aa762;
+    cursor: pointer;
+}
+
+/*positie is absolute omdat het button icoon rechts boven in de hoek moet blijven staan*/
+.register-login-button {
+    position: absolute;
+    border: none;
+    top: 5px;
+    right: 5px;
+    background-color: var(--secondary);
+    padding: 10px;
+    color: #F0FFF0;
+    border-radius: 10px;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+.register-login-button:hover {
+    background-color: #1aa762;
+    cursor: pointer;
+}
+

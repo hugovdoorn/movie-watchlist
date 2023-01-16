@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Film watchlist applicatie frontend eindopdracht. 
+Eindopdracht gemaakt voor de frontend leerlijn van NOVI hogeschool. 
+![img.png](img.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## < Inhoudsopgave >
+- Introductie
+- Techstack
+- API
+- De applicatie
+- Hoe run je de web applicatie?
+- Hoe log je in? 
 
-## Available Scripts
+## < Introductie >
+Ben je ook een enorme film fanaat? Maar kan je op het moment van kijken nooit op de
+titel komen. Deze applicatie gaat je daarbij helpen doordat je zelf een kijklijst
+kan maken waardoor je op een later moment altijd kan terugvinden welke films je wil
+bekijken.
 
-In the project directory, you can run:
+## < Techstack >
+- HTML5
+- CSS
+- Javascript
+- ReactJS
 
-### `npm start`
+## < Gebruikte tools >
+- Figma
+- Webstorm
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## < Gebuikte API >
+- The Movie Database (TMBD): https://developers.themoviedb.org/3/getting-started/introduction
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## < De web applicatie >
+Via de start pagina kan je films zoeken en toevoegen aan je kijklijst of bekeken lijst.
+![img_2.png](img_2.png)
 
-### `npm test`
+Na registratie en inloggen kom je bij de watchlist.
+![img_1.png](img_1.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Door met je muis over de poster in de watchlist te gaan kan je deze verwijderen, toevoegen aan watched of de volledige beschrijving lezen door hier met je muis op te klikken. 
+![img_4.png](img_4.png)
 
-### `npm run build`
+## < Runnen van de applicatie >
+1. Start je IDE
+2. Open de terminal van je computer
+3. Check of node geïnstalleerd door het commando: "node-v" te typen in de terminal
+4. Als dit is geïnstalleerd > ga door naar stap 6
+5. Als node niet is geïnstalleerd download het dan via deze link: https://nodejs.org/en/download/
+6. Clone het project van github
+7. Als het project is gecloned op je de terminal van je IDE
+8. Typ: "npm install" in de terminal en druk op enter. Dit zal de benodigde npm packages installeren
+9. Start daarna de applicatie door "npm run start" te typen. De applicatie zal draaien op http://localhost:3000/
+10. Veel plezier met het maken van je film kijklijst! 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## < Hoe in te loggen >
+De applicatie maakt gebruik van de NOVI backend die gebruikers na een uur verwijderd. Om in te loggen zul je een account moeten aanmaken die een gebruikersnaam e-mailadres en wachtwoord bevat. 
+Je kan inloggen door op het profiel icoon te klikken rechtsboven in het scherm. 
+![img_5.png](img_5.png)
+Rechtsboven op de login pagina kan je klikken op de "register" knop waar je jezelf dient te registreren. Wanneer dit is gelukt zal de website je automatisch navigeren naar de login pagina. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Veel plezier! :) 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

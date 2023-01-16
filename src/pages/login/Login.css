@@ -1,0 +1,73 @@
+.login{
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.4)
+    ),
+    url(../../assets/images/background_login_pic.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.login-title{
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.login-form{
+    width: 20%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+}
+
+.login-form > label{
+    margin: 10px 0;
+}
+
+.login-input{
+    padding: 10px;
+    background-color: #fdfdfd;
+    border: none;
+}
+
+.login-button{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: var(--secondary);
+    border: none;
+    color: #F0FFF0;
+    border-radius: 10px;
+    padding: 10px;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #1aa762;
+    cursor: pointer;
+}
+
+/*positie is absolut omdat het button icoon rechts boven in de hoek moet blijven staan*/
+.login-register-button{
+    position: absolute;
+    border: none;
+    top: 5px;
+    right: 5px;
+    background-color: var(--primary);
+    padding: 10px;
+    color: #F0FFF0;
+    border-radius: 10px;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+.login-register-button:hover {
+    background-color: #1aa762;
+    cursor: pointer;
+}
