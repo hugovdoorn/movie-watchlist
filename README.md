@@ -1,6 +1,6 @@
 # Film watchlist applicatie frontend eindopdracht. 
 Eindopdracht gemaakt voor de frontend leerlijn van NOVI hogeschool. 
-![img.png](img.png)
+![img.png](src/assets/images/img.png)
 
 ## < Inhoudsopgave >
 - Introductie
@@ -31,13 +31,13 @@ bekijken.
 
 ## < De web applicatie >
 Via de start pagina kan je films zoeken en toevoegen aan je kijklijst of bekeken lijst.
-![img_2.png](img_2.png)
+![img.png](src/assets/images/img.png)
 
 Na registratie en inloggen kom je bij de watchlist.
-![img_1.png](img_1.png)
+![img_1.png](src/assets/images/img_1.png)
 
 Door met je muis over de poster in de watchlist te gaan kan je deze verwijderen, toevoegen aan watched of de volledige beschrijving lezen door hier met je muis op te klikken. 
-![img_4.png](img_4.png)
+![img_4.png](src/assets/images/img_4.png)
 
 ## < Runnen van de applicatie >
 1. Start je IDE
@@ -54,7 +54,7 @@ Door met je muis over de poster in de watchlist te gaan kan je deze verwijderen,
 ## < Hoe in te loggen >
 De applicatie maakt gebruik van de NOVI backend die gebruikers na een uur verwijderd. Om in te loggen zul je een account moeten aanmaken die een gebruikersnaam e-mailadres en wachtwoord bevat. 
 Je kan inloggen door op het profiel icoon te klikken rechtsboven in het scherm. 
-![img_5.png](img_5.png)
+![img_5.png](src/assets/images/img_5.png)
 Rechtsboven op de login pagina kan je klikken op de "register" knop waar je jezelf dient te registreren. Wanneer dit is gelukt zal de website je automatisch navigeren naar de login pagina. 
 
 Veel plezier! :) 
