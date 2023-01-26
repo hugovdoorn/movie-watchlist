@@ -1,31 +1,29 @@
-    import {Link} from "react-router-dom";
-    import {AuthContext} from "../../context/AuthContext";
-    import {useContext} from "react";
-    import axios from "axios";
-    import "./Login.css"
-    import {useForm} from "react-hook-form";
+import {Link} from "react-router-dom";
+import {AuthContext} from "../../context/AuthContext";
+import {useContext} from "react";
+import axios from "axios";
+import "./Login.css"
+import {useForm} from "react-hook-form";
 
-    function Login(){
-        const {register, handleSubmit, formState: {errors}} = useForm();
-        const {loginFunction} = useContext(AuthContext)
-        const bASE_URI = `https://frontend-educational-backend.herokuapp.com/api/auth/signin`
-        
-        async function onFormSubmit(data) {
-            try {
-                const response = await axios.post(bASE_URI, {
-                    username: data.username,
-                    password: data.password,
-                });
-                console.log(response)
-                loginFunction(response.data)
-
-            } catch (e) {
-                console.error(e);
-                if (e.response.status === 401) {
-                    alert("Credentials dont match, try again.")
-                }
+function Login(){
+    const {register, handleSubmit, formState: {errors}} = useForm();
+    const {loginFunction} = useContext(AuthContext)
+    const bASE_URI = `https://frontend-educational-backend.herokuapp.com/api/auth/signin`
+    async function onFormSubmit(data) {
+        try {
+            const response = await axios.post(bASE_URI, {
+                username: data.username,
+                password: data.password,
+            });
+            console.log(response)
+            loginFunction(response.data)
+        } catch (e) {
+            console.error(e);
+            if (e.response.status === 401) {
+                alert("Credentials dont match, try again.")
             }
         }
+    }
 
     return(
         <div className="login">

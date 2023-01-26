@@ -29,7 +29,6 @@ function Header() {
                         <li>
                             <NavLink to="/" className="btn">+ add</NavLink>
                         </li>
-                        {/*Als de gebruiker is ingelogd wordt je naar de profielpagina gelinked zolang de gebruiker is ingelogd*/}
                         <li>
                             {isAuthenticated ?
                                 <NavLink to="/profile"> <FontAwesomeIcon icon={faCircleUser}></FontAwesomeIcon> </NavLink> :

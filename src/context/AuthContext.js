@@ -1,9 +1,10 @@
 import React, {createContext, useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
-import jwtDecode from "jwt-decode";
 import axios from "axios";
+
 export const AuthContext = createContext({});
 function AuthContextProvider({ children }) {
+
     const [auth, toggleAuth] = useState({
         isAuth: false,
         username: null,
@@ -11,23 +12,19 @@ function AuthContextProvider({ children }) {
     });
 
     useEffect(() => {
-        // check of er nog een token in Local Storage staat
         const token = localStorage.getItem("token");
 
         if (token) {
-            const decodedToken = jwtDecode(token)
-            fetchUserData(token, decodedToken)
-            console.log(decodedToken);
+            fetchUserData(token)
         } else {
             toggleAuth({
                 ...auth,
                 status: "done",
             });
         }
-    }, [], );
+    }, [] );
 
-    // ZO JA: haal dan de nieuwe data op en zet deze in de state:
-    async function fetchUserData(token, decodedToken) {
+    async function fetchUserData(token) {
         try {
             const response = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`, {
                 headers: {
@@ -56,7 +53,6 @@ function AuthContextProvider({ children }) {
     }
 
     const navigate = useNavigate();
-
     function login(userInfo) {
         localStorage.setItem("token", userInfo.accessToken);
 
@@ -82,6 +78,7 @@ function AuthContextProvider({ children }) {
     const contextData = {
         isAuthenticated: auth.isAuth,
         authFunction: toggleAuth,
+        username: auth.username,
         loginFunction: login,
         logoutFunction: logout,
     }

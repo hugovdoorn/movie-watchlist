@@ -19,7 +19,7 @@ function App() {
             <Header />
             <div className= "outer-container">
                 <Routes>
-                    <Route exact path="/" element={<Add />} />
+                    <Route exact path="/" element={isAuthenticated ? <Add /> : <Navigate to="/login"/>} />
                     <Route path="/watched" element={isAuthenticated ? <Watched /> : <Navigate to="/login"/>} />
                     <Route path="/watchlist" element={ isAuthenticated ? <Watchlist /> : <Navigate to="/login"/>} />
                     <Route path="/login" element={<Login />} />

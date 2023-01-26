@@ -4,18 +4,14 @@ import ResultCard from "../../components/resultcard/ResultCard";
 import "./Add.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
-
-
 function Add() {
     const [query, setQuery] = useState("");
     const [results, setResults] = useState([]);
     const [error, toggleError] = useState(false);
 
-
     useEffect(() => {
         async function fetchData() {
             toggleError(false);
-
             try {
                 const response = await axios.get(
                     `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1&include_adult=false&query=${query}`,
@@ -26,7 +22,6 @@ function Add() {
                 toggleError(true);
             }
         }
-
         if (query) {
             fetchData();
         }

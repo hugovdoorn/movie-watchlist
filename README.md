@@ -26,14 +26,14 @@ bekijken.
 - Figma
 - Webstorm
 
-## < Gebuikte API >
+## < Gebruikte API >
 - The Movie Database (TMBD): https://developers.themoviedb.org/3/getting-started/introduction
 
 ## < De web applicatie >
 Via de start pagina kan je films zoeken en toevoegen aan je kijklijst of bekeken lijst.
 ![img.png](src/assets/images/img.png)
 
-Na registratie en inloggen kom je bij de watchlist.
+Na registratie en inloggen kan je films zoeken en toevoegen en kom je bij de watchlist.
 ![img_1.png](src/assets/images/img_1.png)
 
 Door met je muis over de poster in de watchlist te gaan kan je deze verwijderen, toevoegen aan watched of de volledige beschrijving lezen door hier met je muis op te klikken. 

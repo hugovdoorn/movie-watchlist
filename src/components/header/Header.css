@@ -53,24 +53,6 @@ header .nav-links li:last-child {
     margin-left: auto;
 }
 
-@media (min-width: 768px) {
-    .outer-container {
-        width: 750px;
-    }
-}
-
-@media (min-width: 992px) {
-    .outer-container {
-        width: 970px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .outer-container {
-        width: 1170px;
-    }
-}
-
 .btn:hover {
     background-color: #1aa762;
     cursor: pointer;

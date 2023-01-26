@@ -10,44 +10,41 @@ function MovieControls({movie, type}) {
         moveToWatchList,
         removeFromWatched} = useContext(GlobalContext);
 
-return (
-<div className="inner-card-controls">
-{/* In de watchlist willen we andere controls/buttons dan in de watched lijst*/}
-    {type === "watchlist" &&(
-        <>
-        <button className="ctrl-btn"
-                onClick={() => addMovieToWatched(movie)}
-        >
-            <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
-        </button>
+    return (
+        <div className="inner-card-controls">
+            {type === "watchlist" &&(
+                <>
+                    <button className="ctrl-btn"
+                            onClick={() => addMovieToWatched(movie)}
+                    >
+                        <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+                    </button>
 
-            <button className="ctrl-btn"
-                    // de functionaliteit om via de context in dit onClick event films te verwijderen van de watchlist
-                    onClick={() => removeMovieFromWatchList(movie.id)}
-            >
-                <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
-            </button>
-        </>
-    )}
+                    <button className="ctrl-btn"
+                            onClick={() => removeMovieFromWatchList(movie.id)}
+                    >
+                        <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
+                    </button>
+                </>
+            )}
 
-    {type === "watched" &&(
-        <>
-        <button className="ctrl-btn"
-                onClick={() => moveToWatchList(movie)}
-        >
-        <FontAwesomeIcon icon={faEyeSlash}></FontAwesomeIcon>
-        </button>
+            {type === "watched" &&(
+                <>
+                    <button className="ctrl-btn"
+                            onClick={() => moveToWatchList(movie)}
+                    >
+                        <FontAwesomeIcon icon={faEyeSlash}></FontAwesomeIcon>
+                    </button>
 
-        <button className="ctrl-btn"
-        // de functionaliteit om via de context in dit onClick event films te verwijderen van de watchlist
-                onClick={() => removeFromWatched(movie.id)}
-        >
-        <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
-        </button>
-        </>
-    )}
-</div>
-);
+                    <button className="ctrl-btn"
+                            onClick={() => removeFromWatched(movie.id)}
+                    >
+                        <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
+                    </button>
+                </>
+            )}
+        </div>
+    );
 }
 
 export default MovieControls;

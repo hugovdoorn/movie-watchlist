@@ -1,4 +1,3 @@
-/* height kan niet 'gewoon' 100 vh worden omdat de navigatiebalk sticky is en anders krijg je overlap met elkaar. De navigatiebalk is 50px daarom wordt het 100vh-50px*/
 .register{
     height: calc(100vh - 50px);
     display: flex;
@@ -56,7 +55,6 @@
     cursor: pointer;
 }
 
-/*positie is absolute omdat het button icoon rechts boven in de hoek moet blijven staan*/
 .register-login-button {
     position: absolute;
     border: none;

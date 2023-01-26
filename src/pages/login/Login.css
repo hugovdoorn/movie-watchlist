@@ -53,7 +53,6 @@
     cursor: pointer;
 }
 
-/*positie is absolut omdat het button icoon rechts boven in de hoek moet blijven staan*/
 .login-register-button{
     position: absolute;
     border: none;

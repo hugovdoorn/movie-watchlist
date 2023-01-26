@@ -50,7 +50,7 @@ function Register(){
                     {...register("email", {
                         required: true,
                         minLength: {value: 6, message: "Minimum amount of characters is 6",},
-                        // pattern gebruikt opgebouwd door middel van een regular expression (RegEx)
+                        // pattern gebruikt die wordt opgebouwd door middel van een regular expression (RegEx)
                         validate: (value) => /^.+@.+\..+$/.test(value) || 'Email should contain an @ character',
                     })}
                 />
@@ -70,14 +70,14 @@ function Register(){
                 <button type="submit" className="register-button" >register</button>
             </form>
             <Link to="/login">
-                    <button className="register-login-button">
-                        login
-                    </button>
+                <button className="register-login-button">
+                    login
+                </button>
             </Link>
         </div>
     )
 }
 
-export default Register
+export default Register;
 
 

@@ -13,7 +13,6 @@ function Overview() {
         async function fetchOverview() {
             setError(false);
             setLoading(true);
-
             try {
                 const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
                 setMovie(response.data);
@@ -21,7 +20,6 @@ function Overview() {
                 console.error(e);
                 setError(true);
             }
-
             setLoading(false);
         }
 
@@ -33,11 +31,9 @@ function Overview() {
     if (loading) {
         return <p>Loading...</p>;
     }
-
     if (error) {
         return <p>Error: getting the movie description information went wrong. Please try again. </p>;
     }
-
     if (!movie) {
         return null;
     }

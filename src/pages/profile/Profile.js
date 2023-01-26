@@ -1,39 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import "./Profile.css";
 import ProfilePic from "../../assets/images/profile_pic.jpg";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import axios from "axios";
 
-function Profile() {
-    const { isAuthenticated, logoutFunction } = useContext(AuthContext);
-// Get userData from local storage if exists, otherwise use an empty object
-    const [userData, setUserData] = useState(JSON.parse(localStorage.getItem("userData")) || { username: "", email: "", watched: [], watchlist: [] });
-
-    useEffect(() => {
-        // Check if userData is empty
-        if (!Object.keys(userData).length) {
-            // If it is, try to get it from localStorage
-            setUserData(JSON.parse(localStorage.getItem("userData")) || {});
-        }
-    }, [userData]);
+function Profile(key) {
+    const {isAuthenticated, logoutFunction} = useContext(AuthContext);
+    const [userData, setUserData] = useState("");
 
     useEffect(() => {
         if (isAuthenticated) {
-            // Fetch user data only if user is authenticated
             const fetchData = async () => {
                 try {
-                    // Add authorization header with the user's access token
                     const res = await axios.get("https://frontend-educational-backend.herokuapp.com/api/user", {
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": `Bearer ${localStorage.getItem("token")}`,
                         }
                     });
-                    // Save the user data to local storage
-                    localStorage.setItem("userData", JSON.stringify({ username: res.data.username, email: res.data.email, watched: res.data.watched, watchlist: res.data.watchlist }));
-                    // Update the state
-                    setUserData({ username: res.data.username, email: res.data.email, watched: res.data.watched, watchlist: res.data.watchlist });
+                    setUserData(res.data);
                 } catch (e) {
                     console.error(e.response);
                 }
@@ -41,10 +27,10 @@ function Profile() {
             fetchData();
         }
     }, [isAuthenticated]);
-
     const handleLogout = () => {
         logoutFunction();
-        localStorage.removeItem("token");
+        localStorage.clear();
+        window.location.reload();
     }
 
     return (
@@ -69,5 +55,4 @@ function Profile() {
         </div>
     );
 }
-
 export default Profile;
